@@ -80,6 +80,7 @@ async def main():
     clients = [
         ModbusClient(1, "192.168.30.100", 9000),
         ModbusClient(2, "192.168.1.200", 10000),
+        ModbusClient(3, "192.168.31.300", 10000),
     ]
     await asyncio.gather(*(client.run() for client in clients))
 
